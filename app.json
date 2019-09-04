@@ -1,0 +1,5 @@
+{
+    "name": "Aalto Oodi calendar export",
+    "description": "Aalto Oodi calendar export",
+    "image": "heroku/python"
+}

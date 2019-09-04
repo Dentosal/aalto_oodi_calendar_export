@@ -1,6 +1,5 @@
-import weboodi
+from . import weboodi
 from flask import Flask, Response
-from dotenv import load_dotenv
 
 app = Flask(__name__)
 
@@ -12,5 +11,6 @@ def exams_ical():
 
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv
     load_dotenv()
     app.run()

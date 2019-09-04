@@ -1,0 +1,8 @@
+beautifulsoup4==4.8.0
+Flask==1.1.1
+icalendar==4.0.3
+lxml==4.4.1
+pytz==2019.2
+requests==2.18.4
+requests-toolbelt==0.8.0
+gunicorn
