@@ -110,9 +110,3 @@ class WebOodi:
                 calendar.add_component(event)
 
         return calendar
-
-
-def get_exams_ical():
-    oodi = WebOodi()
-    oodi.login(os.environ["WEBOODI_USERNAME"], os.environ["WEBOODI_PASSWORD"])
-    return oodi.get_exams_cal().to_ical()

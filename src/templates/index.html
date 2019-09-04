@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebOodi calendar export</title>
+    <link rel="stylesheet" href="/static/normalize_and_skeleton.css"/>
+    <link rel="stylesheet" href="/static/index.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Aalto WebOodi calendar export</h1>
+        <p class="u-center-text">
+            Automatically export exam dates directly to Google, Apple, Outlook and other calendars using
+            <a href="https://en.wikipedia.org/wiki/ICalendar">iCalendar</a> protocol.
+        </p>
+
+        <div class="primary-content">
+            <h2>Generate calendar subscription URL</h2>
+            <p>
+                Log in with Aalto IDP credentials.
+                Credentials are verified by logging in to WebOodi automatically.
+            </p>
+            <form action="" method="POST">
+                <div class="row">
+                    <input name="username" id="username" placeholder="username" autocomplete="off" type="text" class="six columns"/>
+                    <input name="password" id="password" placeholder="password" autocomplete="off" type="password" class="six columns"/>
+                </div>
+                <div class="row">
+                    <input value="Generate subscribition URL" type="submit" class="button-primary u-full-width"/>
+                </div>
+            </form>
+
+            {% if error %}
+            <div class="row error">Error: {{error}}</div>
+            {% endif %}
+
+            {% if url %}
+            <h2>Generated URL</h2>
+            <div class="row generated-url">{{ url }}</div>
+            {% endif %}
+        </div>
+
+        <h2>Importing instructions for</h2>
+        <div class="row logos">
+            <div class="four columns">
+                <a target="_blank" href="https://help.sportlyzer.com/hc/en-us/articles/207593579-Add-iCal-to-Google-Calendar#url">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Google_Calendar.png" alt="Google Calendar logo">
+                    <span>Google Calendar</span>
+                </a>
+            </div>
+            <div class="four columns">
+                <a target="_blank" href="https://support.apple.com/en-us/HT202361">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Calendar_Icon.png" alt="Apple Calendar logo">
+                    <span>Apple Calendar</span>
+                </a>
+            </div>
+            <div class="four columns">
+                <a target="_blank" href="https://support.office.com/en-us/article/import-or-subscribe-to-a-calendar-in-outlook-on-the-web-503ffaf6-7b86-44fe-8dd6-8099d95f38df">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook logo">
+                    <span>Microsoft Outlook</span>
+                </a>
+            </div>
+        </div>
+
+        <h2>Problems? Questions? Feature requests?</h2>
+        <p>
+            Create an issue in <a href="https://github.com/Dentosal/aalto_oodi_calendar_export/issues/new">GitHub/</a>.
+            Pull requests are appreciated as well.
+        </p>
+
+        <h2>Security & privacy</h2>
+        <h3>Logging</h3>
+        <p>
+            Passwords are never logged.
+            IP addresses and usernames might be stored in the temporary log files for debugging, but are not stored persistently.
+        </p>
+        <h3>Cookies and tracking</h3>
+        <p>
+            This site does not use cookies, trackers or ads.
+        </p>
+        <h3>Password security</h3>
+        <p>
+            User passwords are never stored on the server, and are always deleted after the content has been fetched from WebOodi.
+            The subscription url contains username and password, but they are AES256-encrypted, so that only this application can
+            decrypt them. Still, fundamentally this application uses your credentials to access WebOodi. If you don't trust that
+            I handle the credentials properly, you are free to run your own instance, simply
+            <a href="https://github.com/Dentosal/aalto_oodi_calendar_export">
+                clone the source from GitHub
+            </a>
+            and upload it to Heroku. It's free, and will not take more than a couple of minutes, if you already have account.
+        </p>
+        <h3>(Legal) Disclaimer</h3>
+        <p>
+            This service is provided on "as is" basis, without any guarantees about uptime or correctness of data.
+            I'm not responsible for... anything, really.
+            By giving your passsword you might break some University IT policies. I'm not responsibe for that, either.
+            Please do not use the service if you are not allowed to let me to use your passsword.
+        </p>
+    </div>
+
+    <a href="https://github.com/Dentosal/aalto_oodi_calendar_export">
+        <img width="149" height="149"
+            src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+            class="attachment-full size-full"
+            alt="Fork me on GitHub"
+            data-recalc-dims="1"
+            style="position:fixed;top:0;right:0;"
+        />
+    </a>
+</body>
+</html

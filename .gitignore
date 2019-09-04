@@ -1,5 +1,10 @@
+# Development files
 .env
 
 # Python
 __pycache__/
 *.py[oc]
+.pytest_cache/
+
+# Editors
+.vscode/
