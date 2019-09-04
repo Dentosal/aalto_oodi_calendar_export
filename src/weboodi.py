@@ -1,12 +1,12 @@
 import requests
 import os
 import bs4
-from dataclasses import dataclass
 import datetime
 from icalendar import Calendar, Event, vText
 import pytz
 
 BASE_URL = "https://oodi.aalto.fi"
+
 
 class InvalidCredentials(Exception):
     pass
