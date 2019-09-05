@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>WebOodi calendar export</title>
+    <meta name="description" content="Automatically export exam dates from Aalto WebOodi directly to Google, Apple, Outlook and other calendars using iCalendar protocol"/>
+    <meta name="og:title" content="Aalto WebOodi calendar export"/>
+    <meta name="og:description" content="Export exam dates from Aalto WebOodi to your calendar"/>
+    <meta name="og:url" content="https://aalto-oodi-calendar-export.herokuapp.com/"/>
     <link rel="stylesheet" href="/static/normalize_and_skeleton.css"/>
     <link rel="stylesheet" href="/static/index.css"/>
 </head>
@@ -10,7 +14,7 @@
     <div class="container">
         <h1>Aalto WebOodi calendar export</h1>
         <p class="u-center-text">
-            Automatically export exam dates directly to Google, Apple, Outlook and other calendars using
+            Automatically export exam dates from WebOodi directly to Google, Apple, Outlook and other calendars using
             <a href="https://en.wikipedia.org/wiki/ICalendar">iCalendar</a> protocol.
         </p>
 
@@ -26,7 +30,7 @@
                     <input name="password" id="password" placeholder="password" autocomplete="off" type="password" class="six columns"/>
                 </div>
                 <div class="row">
-                    <input value="Generate subscribition URL" type="submit" class="button-primary u-full-width"/>
+                    <input value="Generate URL" type="submit" class="button-primary u-full-width"/>
                 </div>
             </form>
 
@@ -97,14 +101,15 @@
             Please do not use the service if you are not allowed to let me to use your passsword.
         </p>
     </div>
-
-    <a href="https://github.com/Dentosal/aalto_oodi_calendar_export">
+    <footer class="footer row">
+        <span class="six columns">Created by Hannes Karppila.</span>
+        <span class="six columns">Source code available on <a href="https://github.com/Dentosal/aalto_oodi_calendar_export">GitHub</a>.</span>
+    </footer>
+    <a class="fork-me" href="https://github.com/Dentosal/aalto_oodi_calendar_export">
         <img width="149" height="149"
             src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
-            class="attachment-full size-full"
             alt="Fork me on GitHub"
             data-recalc-dims="1"
-            style="position:fixed;top:0;right:0;"
         />
     </a>
 </body>
