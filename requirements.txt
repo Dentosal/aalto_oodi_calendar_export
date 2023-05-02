@@ -1,5 +1,5 @@
 beautifulsoup4==4.8.0
-Flask==1.1.1
+Flask==2.2.5
 Flask-Limiter==1.0.1
 gunicorn==19.9.0
 icalendar==4.0.3
